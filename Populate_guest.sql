@@ -10,6 +10,7 @@ insert into guest (guest_id, guest_name, address, member_id) values (9, 'Gerik',
 insert into guest (guest_id, guest_name, address, member_id) values (10, 'Ichabod', 'PO Box 20465', 31);
 insert into guest (guest_id, guest_name, address, member_id) values (11, 'Oralle', 'PO Box 85566', 33);
 insert into guest (guest_id, guest_name, address, member_id) values (12, 'Elie', 'Suite 21', 35);
+insert into guest (guest_id, guest_name, address, member_id) values (13, 'Elipay', 'Suite 22', 35);
 
 
 insert into guest_phone_number (guest_member_id, phone_number) values (13, '763-553-1149');

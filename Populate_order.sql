@@ -28,6 +28,7 @@ insert into `order` (order_id, create_time, product_id, subtotal) values (27, '2
 insert into `order` (order_id, create_time, product_id, subtotal) values (28, '2022-06-21 15:11:01', 28, 300);
 insert into `order` (order_id, create_time, product_id, subtotal) values (29, '2022-06-29 04:57:13', 29, 400);
 insert into `order` (order_id, create_time, product_id, subtotal) values (30, '2022-11-30 04:32:09', 30, 500);
+insert into `order` (order_id, create_time, product_id, subtotal) values (31, '2022-11-29 04:32:09', 30, 500);
 
 
 
@@ -61,3 +62,4 @@ insert into order_info (store_id, payment_id, order_id) values (2, 27, 27);
 insert into order_info (store_id, payment_id, order_id) values (3, 28, 28);
 insert into order_info (store_id, payment_id, order_id) values (4, 29, 29);
 insert into order_info (store_id, payment_id, order_id) values (5, 30, 30);
+insert into order_info (store_id, payment_id, order_id) values (5, 31, 31);

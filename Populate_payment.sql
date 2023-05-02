@@ -28,6 +28,7 @@ insert into payment (payment_id, payment_info, payment_time, customer_id, member
 insert into payment (payment_id, payment_info, payment_time, customer_id, membership_card_id) values (28, 'In quis justo.', '2022-11-07 07:38:58', 88, NULL);
 insert into payment (payment_id, payment_info, payment_time, customer_id, membership_card_id) values (29, 'In est risus, auctor sed, tristique in, tempus sit amet, sem.', '2023-01-08 09:08:00', 89, NULL);
 insert into payment (payment_id, payment_info, payment_time, customer_id, membership_card_id) values (30, 'Phasellus sit amet erat.', '2023-04-07 03:05:38', 90, NULL);
+insert into payment (payment_id, payment_info, payment_time, customer_id, membership_card_id) values (31, 'Phasellus sit amet erat.', '2023-04-08 03:05:38', 90, NULL);
 
 
 
@@ -62,6 +63,7 @@ insert into payment_method (payment_id, payment_method) values (27, 'Debit Card'
 insert into payment_method (payment_id, payment_method) values (28, 'Credit Card');
 insert into payment_method (payment_id, payment_method) values (29, 'Credit Card');
 insert into payment_method (payment_id, payment_method) values (30, 'Cash');
+insert into payment_method (payment_id, payment_method) values (31, 'Cash');
 
 
 
@@ -95,3 +97,4 @@ insert into payment_info (cashier_id, payment_id, customer_id) values ('E069', 2
 insert into payment_info (cashier_id, payment_id, customer_id) values ('E091', 28, 88);
 insert into payment_info (cashier_id, payment_id, customer_id) values ('E093', 29, 89);
 insert into payment_info (cashier_id, payment_id, customer_id) values ('E094', 30, 90);
+insert into payment_info (cashier_id, payment_id, customer_id) values ('E094', 31, 90);

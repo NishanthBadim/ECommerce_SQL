@@ -27,7 +27,7 @@ FOREIGN KEY(person_id) references person(person_id)
 drop table if exists employee;
 create table employee (
 employee_id varchar(4) NOT NULL,
-salary varchar(25) NOT NULL,
+salary int(12) NOT NULL,
 date_of_birth DATE NOT NULL,
 member_id int(9),
 person_id int(9),
@@ -96,8 +96,10 @@ foreign key(manager_id) references employee(employee_id)
 drop table if exists floor_staff;
 create table floor_staff(
 floor_staff_id varchar(4) not null,
+supervised_by varchar(4) not null,
 primary key(floor_staff_id),
-foreign key(floor_staff_id) references employee(employee_id)
+foreign key(floor_staff_id) references employee(employee_id),
+foreign key(supervised_by) references manager(manager_id)
 );
 
 -- CASHIER
@@ -105,8 +107,10 @@ foreign key(floor_staff_id) references employee(employee_id)
 drop table if exists cashier;
 create table cashier(
 cashier_id varchar(4) not null,
+supervised_by varchar(4) not null,
 primary key(cashier_id),
-foreign key(cashier_id) references employee(employee_id)
+foreign key(cashier_id) references employee(employee_id),
+foreign key(supervised_by) references manager(manager_id)
 );
 
 -- CUSTOMER
@@ -128,7 +132,9 @@ drop table if exists `floor`;
 create table `floor`(
 floor_id int(9) not null,
 floor_num int(3) not null,
-primary key(floor_id)
+floor_staff_id varchar(4) not null,
+primary key(floor_id),
+foreign key(floor_staff_id) references floor_staff(floor_staff_id)
 );
 
 -- FLOOR MANAGING LOG
@@ -137,6 +143,7 @@ drop table if exists floor_managing_log;
 create table floor_managing_log(
 floor_id int(9) not null,
 floor_day ENUM('Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday') not null,
+`date` DATE,
 primary key(floor_id, floor_day),
 foreign key(floor_id) references `floor`(floor_id)
 );
@@ -180,8 +187,10 @@ store_day varchar(20) not null,
 open_time timestamp default current_timestamp,
 close_time timestamp default current_timestamp,
 day_of_week ENUM('Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'),
+store_id int(9) not null,
 primary key(employee_manager_id, store_day),
-foreign key(employee_manager_id) references manager(manager_id)
+foreign key(employee_manager_id) references manager(manager_id),
+foreign key(store_id) references store(store_id)
 );
 
 
